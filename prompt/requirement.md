@@ -4,7 +4,7 @@
 Notionのタスク管理データベースを参照し、「締切日」と任意の「リスケ日」プロパティから算出した**通知対象日**について、(1) 通知対象日の当日（= 今日）および (2) 通知対象日の3日前にあたる日に、該当タスクを抽出してLINE Messaging APIを使用してユーザーにプッシュ通知を行うシステム。
 参照記事の実装をベースとするが、インフラとして**GitHub Actions**のCron機能を利用し、サーバーレスかつ無料で定期実行を実現する。
 
-**参照記事**: [Notion APIを使って締切日が「今日」のタスクをLINE通知してみた](https://gyas.co.jp/knowledge_blog/notion-api-line-notify/)
+**参照記事(Vercelを使用しているため注意)**: [Notion APIを使って締切日が「今日」のタスクをLINE通知してみた](https://gyas.co.jp/knowledge_blog/notion-api-line-notify/)
 
 ## 2. 目的
 - 日々のタスク締切日をLINEで受け取ることで、タスクの失念を防止する。
