@@ -1,6 +1,9 @@
 import { addDays, isSameDay } from "date-fns";
-
-export type NotificationType = "today" | "3days";
+import {
+  NOTIFICATION_CONFIG,
+  NotificationConfigItem,
+  NotificationType,
+} from "./config";
 
 export interface TaskForNotification {
   title: string;
@@ -34,7 +37,6 @@ function parseDateProperty(prop: any): Date | null {
 
 export async function getTasksForNotification(): Promise<TaskForNotification[]> {
   const today = new Date();
-  const threeDaysLater = addDays(today, 3);
 
   const pages: any[] = [];
   let hasMore = true;
@@ -112,10 +114,14 @@ export async function getTasksForNotification(): Promise<TaskForNotification[]> 
 
     let type: NotificationType | null = null;
 
-    if (isSameDay(notificationDate, today)) {
-      type = "today";
-    } else if (isSameDay(notificationDate, threeDaysLater)) {
-      type = "3days";
+    for (const [notificationType, config] of Object.entries(
+      NOTIFICATION_CONFIG,
+    ) as [NotificationType, NotificationConfigItem][]) {
+      const targetDate = addDays(today, config.offsetDays);
+      if (isSameDay(notificationDate, targetDate)) {
+        type = notificationType;
+        break;
+      }
     }
 
     if (!type) continue;

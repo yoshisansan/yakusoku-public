@@ -1,5 +1,6 @@
 import { getTasksForNotification, TaskForNotification } from "./notion";
 import { sendLine } from "./line";
+import { NOTIFICATION_CONFIG, NOTIFICATION_HEADER } from "./config";
 
 function requireEnv(name: string): string {
   const value = process.env[name];
@@ -24,13 +25,13 @@ async function main() {
   }
 
   const lines = tasks.map((t: TaskForNotification) => {
-    const prefix = t.type === "3days" ? "[3日前]" : "[当日]";
+    const prefix = NOTIFICATION_CONFIG[t.type].prefix;
     return `🔔 ${prefix} ${t.title}`;
   });
 
   const body = lines.join("\n");
-  const header = "本日および3日後が締切（またはリスケ日）のタスクは以下です。";
-  const message = `${header}\n\n${body}`;
+
+  const message = `${NOTIFICATION_HEADER}\n\n${body}`;
 
   await sendLine(message);
 }
