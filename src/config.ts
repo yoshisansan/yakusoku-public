@@ -8,7 +8,7 @@
  * 2. .github/workflows/notify-tasks.yml の schedule のコメントを外す
  * 3. GitHub の Repository Settings → Secrets and variables → Actions で必要なシークレットを設定
  */
-export const ENABLE_AUTO_RUN = true;
+export const ENABLE_AUTO_RUN = false;
 
 export type NotificationType = "today" | "2days";
 
