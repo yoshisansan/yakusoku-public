@@ -1,0 +1,30 @@
+MIT License
+
+Copyright (c) 2025 YAKUSOKU_PUBLIC contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-----
+
+日本語による補足説明（参考訳・法的効力を有するのは上記英語原文とする）
+
+- 本ソフトウェアは MIT License のもとで公開されており、商用利用を含め、自由に利用・改変・再配布してよい。
+- ただし、著作権表示および本ライセンス文をソースコードや配布物から削除してはならない。
+- 本ソフトウェアを利用して開発されたサービスや製品から第三者が利益を得た場合であっても、その結果について著作権者および貢献者は一切の責任を負わない。
+- 本ソフトウェアの利用は、著作権者および貢献者による当該サービス・製品の承認や推薦を意味するものではない。
