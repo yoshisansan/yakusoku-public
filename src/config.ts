@@ -8,7 +8,7 @@
  * 2. .github/workflows/notify-tasks.yml の schedule のコメントを外す
  * 3. GitHub の Repository Settings → Secrets and variables → Actions で必要なシークレットを設定
  */
-export const ENABLE_AUTO_RUN = false;
+export const ENABLE_AUTO_RUN = true;
 
 export type NotificationType = "today" | "3days";
 
@@ -23,13 +23,13 @@ export const NOTIFICATION_CONFIG: Record<NotificationType, NotificationConfigIte
     prefix: "[当日]",
   },
   "3days": {
-    offsetDays: 3,
-    prefix: "[3日前]",
+    offsetDays: 2,
+    prefix: "[2日前]",
   },
 };
 
 export const NOTIFICATION_HEADER =
-  "本日および3日後が締切（またはリスケ日）のタスクは以下です。";
+  "本日および2日後が締切（またはリスケ日）のタスクは以下です。";
 
 /* 通知時刻（JST） */
 export const NOTIFICATION_TIME_JST = {
