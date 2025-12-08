@@ -10,7 +10,7 @@
  */
 export const ENABLE_AUTO_RUN = true;
 
-export type NotificationType = "today" | "3days";
+export type NotificationType = "today" | "2days";
 
 export interface NotificationConfigItem {
   offsetDays: number;
@@ -22,7 +22,7 @@ export const NOTIFICATION_CONFIG: Record<NotificationType, NotificationConfigIte
     offsetDays: 0,
     prefix: "[当日]",
   },
-  "3days": {
+  "2days": {
     offsetDays: 2,
     prefix: "[2日前]",
   },
